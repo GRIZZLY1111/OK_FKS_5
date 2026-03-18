@@ -156,7 +156,8 @@ namespace Pract5
             _webDriver.FindElement(By.Id("authUsername")).SendKeys("grizzly");
             _webDriver.FindElement(By.Id("authPassword")).SendKeys("Dragon");
             _webDriver.FindElement(By.Id("authSubmit")).Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
+            _webDriver.FindElement(By.XPath("//*[@id=\"noteScopeFilter\"]/option[2]")).Click();
             _webDriver.FindElement(By.Id("notesList")).Click();
             _webDriver.FindElement(By.Id("deleteBtn")).Click();
             IAlert alert = _webDriver.SwitchTo().Alert();
@@ -207,6 +208,7 @@ namespace Pract5
             _webDriver.FindElement(By.Id("authPassword")).SendKeys("Dragon");
             _webDriver.FindElement(By.Id("authSubmit")).Click();
             Thread.Sleep(2000);
+            _webDriver.FindElement(By.XPath("//*[@id=\"noteScopeFilter\"]/option[2]")).Click();
             _webDriver.FindElement(By.Id("notesList")).Click();
             _webDriver.FindElement(By.Id("shareUsername")).SendKeys("qwerty123");
             _webDriver.FindElement(By.Id("shareBtn")).Click();
@@ -267,6 +269,7 @@ namespace Pract5
             _webDriver.FindElement(By.Id("authPassword")).SendKeys("Dragon");
             _webDriver.FindElement(By.Id("authSubmit")).Click();
             Thread.Sleep(2000);
+            _webDriver.FindElement(By.XPath("//*[@id=\"noteScopeFilter\"]/option[2]")).Click();
             _webDriver.FindElement(By.Id("notesList")).Click();
             _webDriver.FindElement(By.Id("shareBtn")).Click();
             Thread.Sleep(2000);
@@ -283,7 +286,8 @@ namespace Pract5
             _webDriver.FindElement(By.Id("authUsername")).SendKeys("grizzly");
             _webDriver.FindElement(By.Id("authPassword")).SendKeys("Dragon");
             _webDriver.FindElement(By.Id("authSubmit")).Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
+            _webDriver.FindElement(By.XPath("//*[@id=\"noteScopeFilter\"]/option[2]")).Click();
             _webDriver.FindElement(By.Id("notesList")).Click();
             _webDriver.FindElement(By.Id("shareUsername")).SendKeys("111111111111111");
             _webDriver.FindElement(By.Id("shareBtn")).Click();
