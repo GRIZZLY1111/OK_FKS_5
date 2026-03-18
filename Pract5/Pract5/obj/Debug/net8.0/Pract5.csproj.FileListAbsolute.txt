@@ -101,3 +101,4 @@ C:\Users\admin\OneDrive\Рабочий стол\OK_FKS\Pract5\Pract5\Pract5\obj\
 C:\Users\admin\OneDrive\Рабочий стол\OK_FKS\Pract5\Pract5\Pract5\obj\Debug\net8.0\Pract5.pdb
 C:\Users\admin\OneDrive\Рабочий стол\OK_FKS\Pract5\Pract5\Pract5\obj\Debug\net8.0\Pract5.genruntimeconfig.cache
 C:\Users\admin\OneDrive\Рабочий стол\OK_FKS\Pract5\Pract5\Pract5\obj\Debug\net8.0\ref\Pract5.dll
+C:\Users\admin\OneDrive\Рабочий стол\OK_FKS\Pract5\Pract5\Pract5\obj\Debug\net8.0\Pract5.sourcelink.json

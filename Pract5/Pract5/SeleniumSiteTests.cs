@@ -379,8 +379,55 @@ namespace Pract5
             IWebElement NewNoteBtn = _webDriver.FindElement(By.Id("newNoteBtn"));
             NewNoteBtn.Click();
             Thread.Sleep(2000);
-
             Assert.True(NewNoteBtn.Displayed);
+            _webDriver.Close();
+        }
+        [Fact]
+        public void TogetherChangeNote()
+        {
+            _webDriver.Url = "https://test.webmx.ru/";
+            _webDriver.FindElement(By.Id("loginTab")).Click();
+
+            _webDriver.FindElement(By.Id("authUsername")).SendKeys("grizzly");
+            _webDriver.FindElement(By.Id("authPassword")).SendKeys("Dragon");
+            _webDriver.FindElement(By.Id("authSubmit")).Click();
+            Thread.Sleep(2000);
+            IWebElement ComboBox = _webDriver.FindElement(By.Id("noteScopeFilter"));
+            ComboBox.Click();
+            IWebElement Our = _webDriver.FindElement(By.XPath("//*[@id=\"noteScopeFilter\"]/option[3]"));
+            Our.Click();
+            ComboBox.Click();
+            Thread.Sleep(2000);
+            _webDriver.FindElement(By.Id("notesList")).Click();
+            _webDriver.FindElement(By.Id("noteTitle")).SendKeys("Изменил grizzly");
+            _webDriver.FindElement(By.Id("noteContent")).SendKeys("Всей хай с вами grizzly");
+            _webDriver.FindElement(By.Id("saveBtn")).Click();
+            Thread.Sleep(2000);
+            IWebElement message = _webDriver.FindElement(By.Id("message"));
+            Assert.Equal("Заметка обновлена.\r\n×", message.Text);
+            _webDriver.Close();
+        }
+        [Fact]
+        public void TogetherDeleteNote()
+        {
+            _webDriver.Url = "https://test.webmx.ru/";
+            _webDriver.FindElement(By.Id("loginTab")).Click();
+
+            _webDriver.FindElement(By.Id("authUsername")).SendKeys("grizzly");
+            _webDriver.FindElement(By.Id("authPassword")).SendKeys("Dragon");
+            _webDriver.FindElement(By.Id("authSubmit")).Click();
+            Thread.Sleep(2000);
+            IWebElement ComboBox = _webDriver.FindElement(By.Id("noteScopeFilter"));
+            ComboBox.Click();
+            IWebElement Our = _webDriver.FindElement(By.XPath("//*[@id=\"noteScopeFilter\"]/option[3]"));
+            Our.Click();
+            ComboBox.Click();
+            Thread.Sleep(2000);
+            _webDriver.FindElement(By.Id("notesList")).Click();
+            IWebElement Delete = _webDriver.FindElement(By.Id("deleteBtn"));
+            Delete.Click();
+            Thread.Sleep(2000);
+            Assert.False(Delete.Enabled);
             _webDriver.Close();
         }
     }
